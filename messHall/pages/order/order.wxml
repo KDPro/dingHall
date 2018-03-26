@@ -1,0 +1,29 @@
+  <view class="confirms">
+    <view class="orderCon">
+      <view class="orderDetail">
+        <view class="h3">订单详情</view>
+        <view class="p">
+          <text>姓名 : {{name}}</text>
+          <text>联系电话 : {{phone}}</text>
+        </view>
+        <view class="p">
+          <text>时段 : {{time}}</text>
+          <text>是否打包 : {{pkg}}</text>
+        </view>
+      </view>
+      <view class="orderList">
+        <view class="h3">菜品信息</view>
+        <scroll-view scroll-y class="content">
+          <view wx:for="{{orderList}}" wx:key='{{index}}'>
+            <text>{{item.foodName}}</text>
+            <text>x{{item.count}}</text>
+            <text>￥{{item.foodAllPrice}}</text>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="orderPay">
+       <!-- @click="confirm" -->
+        <button class="button" bindtap='order'>确定下单</button>
+      </view>
+    </view>
+  </view>

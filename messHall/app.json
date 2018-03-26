@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/book/book",
+    "pages/order/order",
+    "pages/manager/manager",
+    "pages/orderList/orderList",
+    "pages/orderDetail/orderDetail",
+    "pages/dinagHall/dinagHall",
+    "pages/setVeg/setVeg",
+    "pages/newVeg/newVeg"
+  ],
+  "window": {
+    "navigationBarTitleText": "食堂点餐小助手",
+    "backgroundColor":"white",
+    "navigationBarBackgroundColor":"#000000",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "食堂介绍",
+        "iconPath":"img/index.png",
+        "selectedIconPath":"img/indexAfter.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "预定",
+        "iconPath": "img/time.png",
+        "selectedIconPath": "img/timeAfter.png"
+      },
+      {
+        "pagePath": "pages/manager/manager",
+        "text": "管理",
+        "iconPath": "img/manager.png",
+        "selectedIconPath": "img/managerAfter.png"
+      }
+    ],
+    "color": "#8d8d8d",
+    "selectedColor": "#ff9600",
+    "borderStyle": "black",
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

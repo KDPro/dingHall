@@ -1,0 +1,31 @@
+<!--pages/setVeg/setVeg.wxml-->
+<view class="h3">
+  菜品配置 
+  <view class="addVeg" bindtap='newVeg'><icon class="iconfont icon-jia"></icon>新增菜品</view>
+</view>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">菜品</view>
+    <view class="th">菜名</view>
+    <view class="th ">价钱/元</view>
+    <view class="th ">操作</view>
+  </view>
+  <scroll-view scroll-y class="tbody">
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <view class="tr">
+        <view class="td"><view class="img"><image src="{{item.url}}"></image></view></view>
+        <view class="td">{{item.name}}</view>
+        <view class="td">{{item.price}}</view>
+        <view class="td"><view class="op" bindtap='removeBtn' data-id="{{item.id}}" data-index="{{index}}">删除</view></view>
+      </view>
+    </block>
+  </scroll-view> 
+</view>
+ <view class="modelplane" hidden="{{modelplane}}">
+      <view class="modelBox">
+        <view class="modelHeader">删除</view>
+        <view class="formName">确认删除当前菜品？</view>
+        <button bindtap='boxValue'>确定</button>
+        <view class="remove" bindtap='remove'>X</view>
+      </view>
+  </view>

@@ -1,0 +1,27 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+  <view class="confirms">
+    <view class="orderCon">
+      <view class="orderDetail">
+        <view class="h3">订单详情</view>
+        <view class="p">
+          <text>姓名 : {{name}}</text>
+          <text>联系电话 : {{phone}}</text>
+        </view>
+        <view class="p">
+          <text>时段 : {{time}}</text>
+          <text>是否打包 : {{pkg}}</text>
+        </view>
+      </view>
+      <view class="orderList">
+        <view class="h3">菜品信息</view>
+        <scroll-view scroll-y class="content">
+          <view wx:for="{{list}}" wx:key="{{index}}">
+            <text>{{item.name}}</text>
+            <text>x{{item.count}}</text>
+            <text>￥{{item.price}}</text>
+          </view>
+        </scroll-view>
+        <view class="total">合计：￥{{num}}</view>
+      </view>
+    </view>
+  </view>

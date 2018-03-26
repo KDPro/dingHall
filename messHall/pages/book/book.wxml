@@ -1,0 +1,79 @@
+<!--pages/book/book.wxml-->
+<view class="page">
+    <view class="header">
+      菜品选择
+      <!-- <button>预定设置</button> -->
+    </view>
+    <view class="content">
+      <scroll-view scroll-y enable-back-to-top class="left">
+        <block wx:for="{{leftMenu}}" wx:key="{{index}}" data-index="{{index}}">
+        <!-- {{item.id==menuId?'LliAct':''}} -->
+        <!-- bindtap="changeAct" -->
+            <view class="Lli LliAct" data-index="{{item.id}}">{{item.name}}</view>
+        </block>
+      </scroll-view>
+      <scroll-view scroll-y enable-back-to-top class="right">
+        <block wx:for="{{rightVegetable}}" wx:key="{{index}}" data-id="{{index}}">
+            <view class="Rli">
+              <view class="rightImg"><image src='{{item.url}}'></image></view>
+              <view class="rightCon">
+                <view class="rightTit">{{item.name}}</view>
+                <view class="rightPrice">
+                  <text>￥{{item.price}}</text>
+                  <view class="addAndSub">
+                    <icon class="iconfont icon-jian {{item.count>0?'iconYes':''}}" bindtap="sub" data-index="{{index}}"></icon>
+                    <text class="{{(!item.count||item.count<=0)?'hide':''}}">{{item.count}}</text>
+                    <icon class="iconfont icon-jia {{(!item.count||item.count<=0)?'iconGray':''}}" bindtap="add" data-index="{{index}}"></icon>
+                  </view>
+                </view>
+              </view>
+            </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="footer">
+      <view class="shopCar"><icon class='iconfont icon-icon-test'></icon><text>总计:￥{{total}}</text></view>
+      <button  bindtap='modelShow'>确定预定</button>
+    </view>
+  </view>
+  <view class="modelplane" hidden="{{!modelplane}}">
+      <view class="modelBox">
+        <view class="modelHeader">预定 <icon class="iconfont icon-close" bindtap='modelShow'></icon> </view>
+        <view class="form">
+          <view class="formName">时段选择:</view>
+          <view class="formInput">
+            <input class='select' disabled bindtap="select" value="{{selectValue}}" data-id="{{selectId}}">
+              <view class="selectList" wx:if="{{select}}">
+                <view bindtap='selectThis' data-value="早餐" data-id="1">早餐</view>
+                <view bindtap='selectThis' data-value="午餐" data-id="1">午餐</view>
+                <view bindtap='selectThis' data-value="晚餐" data-id="1">晚餐</view>
+              </view>
+              <icon class="iconfont icon-jiantou {{select?'jisntouT':''}}"></icon>
+            </input>
+          </view>
+        </view>
+         <view class="form">
+          <view class="formName">是否打包:</view>
+          <view class="formInput noneBorder">
+            <view>
+              <icon class="iconfont {{radio?'icon-yuanxingxuanzhong-fill':'icon-yuanxingweixuanzhong'}}" bindtap='radioFun' data-radio="{{!radio}}"></icon>
+              <text>是</text>
+            </view>
+            <view>
+              <icon class="iconfont {{!radio?'icon-yuanxingxuanzhong-fill':'icon-yuanxingweixuanzhong'}}" bindtap='radioFun' data-radio="{{!radio}}"></icon>
+              <text>否</text>
+            </view>
+          </view>
+        </view>
+         <view class="form">
+          <view class="formName">姓名:</view>
+          <view class="formInput"><input placeholder='请输入姓名' maxlength='5' bindinput='fromName'></input></view>
+        </view>
+         <view class="form">
+          <view class="formName">联系方式:</view>
+          <view class="formInput"><input placeholder='请输入联系方式' type='number' maxlength='11' bindinput="formPhone"></input></view>
+        </view>
+        <button bindtap='boxValue'>确定</button>
+      </view>
+  </view>
+

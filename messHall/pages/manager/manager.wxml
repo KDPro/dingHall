@@ -1,0 +1,16 @@
+<!--pages/manager/manager.wxml-->
+  <view class="buttonList">
+    <button bindtap="orderList">预定列表</button>
+    <button bindtap="dinagHall">食堂介绍</button>
+    <button bindtap="setVeg">菜品配置</button>
+  </view> 
+ <view class="modelplane" hidden="{{modelplane}}">
+      <view class="modelBox">
+        <view class="modelHeader">管理登录</view>
+         <view class="form">
+          <view class="formName">管理密码:</view>
+          <view class="formInput"><input placeholder='请输入密码' bindinput="fromPwd"></input></view>
+        </view>
+        <button bindtap='boxValue'>确定</button>
+      </view>
+  </view>

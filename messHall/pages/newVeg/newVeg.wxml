@@ -1,0 +1,28 @@
+<!--pages/newVeg/newVeg.wxml-->
+<view class="h3"></view>
+ <view class="inL">
+    <view class="title">菜品图片:</view>
+    <view class='flexI'>
+      <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+         <image src="{{item}}" data-index="{{index}}" mode="" bindtap="previewImg"></image>
+         <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">X</view>
+      </view>
+      <view class="add" bindtap='chooseImg' wx:if='{{lenMore!=1}}'>+</view>  
+    </view>
+  </view>
+  <view class="inL">
+    <view class="title">菜品名称:</view>
+    <view class='flexI'>
+      <input class='input' placeholder='请输入菜品名字' bindinput="title"></input>
+    </view>
+  
+  </view>
+ 
+  <view class="inL">
+    <view class="title">菜品价格:</view>
+    <view class='flexI'>
+      <input class='input' placeholder="输入菜品价格/单位：元" bindinput='introduce' type="number"></input>  
+    </view>
+  </view> 
+  <view class="btn" bindtap="toUpload">确定</view>
+

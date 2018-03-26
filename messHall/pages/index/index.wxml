@@ -1,0 +1,10 @@
+<view class="header">{{title}}</view>
+<scroll-view class="other" scroll-y enable-back-to-top>
+  <!-- <block wx:for="{{imageList}}" wx:key="{{index}}"> -->
+    <view class="img"><image mode="widthFix" src='{{icon}}'></image></view>
+  <!-- </block> -->
+  <view class="text">
+    <import src="../../wxParse/wxParse.wxml" />
+    <template is="wxParse" data="{{wxParseData:context.nodes}}" />
+  </view>
+</scroll-view>

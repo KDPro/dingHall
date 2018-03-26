@@ -1,0 +1,354 @@
+/* pages/book/book.wxss */
+ page {
+    width: 100%;
+    height: 100%;
+} 
+.page {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+.header {
+  width:100%;
+  height:40px;
+  line-height:40px;
+  text-align: center;
+  color:#4e4e4e;
+  font-size:15px;
+  border-bottom:1px solid #c2c2c2;
+  background-color: #f4f4f4;
+  position:relative;
+}
+.header button {
+  width:80px;
+  height:30px;
+  border-radius: 100px;
+  background-color: #00a9c2;
+  line-height: 30px;
+  font-size:14px;
+  position:absolute;
+  top:5px;
+  right:15px;
+  color:white;
+  padding:0;
+}
+.footer {
+  width:100%;
+  height:50px;
+  line-height:46px; 
+  position:relative;
+  background-color: #f4f4f4;
+  border-top:1px solid #c2c2c2;
+  box-shadow: 0 -1px 5px 0 #c2c2c2 inset;
+  box-sizing: border-box;
+  padding-left:20%;
+}
+.footer button {
+  width:80px;
+  height:30px;
+  border-radius: 100px;
+  background-color: #f1941c;
+  line-height: 30px;
+  font-size:14px;
+  position:absolute;
+  top:10px;
+  right:15px;
+  color:white;
+  padding:0;
+}
+.footer .shopCar icon{
+  font-size:30px;
+  color:#f1941c;
+  vertical-align: middle;
+}
+.footer .shopCar text {
+  color:#fb4343;
+  font-size:16px;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left:5px;
+}
+.content {
+  flex:1;
+  display: flex;
+}
+.content .left {
+  width:90px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+.content .right {
+  flex: 1;
+}
+.Lli {
+  width:100%;
+  height:40px;
+  line-height:40px;
+  border-bottom:1px solid #c2c2c2;
+  text-align: center;
+  color:#333;
+  font-size:14px;
+}
+.LliAct {
+  background-color: white;
+}
+.Rli {
+  padding:10px 15px 10px 10px;
+  border-bottom:1px solid #ececec;
+  display: flex;
+}
+.Rli .rightImg {
+  width:35%;
+  padding-bottom:28%;
+  border-radius: 10px;
+  background-color: rebeccapurple;
+  position:relative;
+}
+.Rli .rightImg image {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+}
+.rightCon {
+    flex: 1;
+    padding:0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rightTit {
+    font-size:15px;
+     font-weight: bold; 
+    flex: 1;
+  }
+  .rightNum,.rightDes {
+    color:#747474;
+    font-size:12px;
+    flex: 1;
+  }
+  .rightPrice {
+    font-size:16px;
+    font-weight: bold;
+    color:#ff4900;
+    flex: 1;
+  }
+  .addAndSub {
+    float:right;
+    margin-top:-10px;
+    font-weight: 100;
+    position:relative;
+  }
+  .addAndSub:after {
+    display: block;
+    content:"";
+    clear: both;
+  }
+  .addAndSub icon {
+    font-size:28px;
+    float: left;
+  }
+  .addAndSub text {
+    color:#333;
+    font-weight: bold;
+    text-align: center;
+    font-size:14px;
+    float: left;
+    width:20px;
+    margin-top:6px;
+    opacity: 1;
+    -webkit-transition:all .5s linear;
+    transition: all .5s linear;
+  }
+  .addAndSub .hide {
+    opacity: 0;
+    transition: all 0s linear;
+  }
+  .addAndSub .icon-jian {
+    -webkit-transform: rotate(90deg);
+    transform:rotate(90deg);
+    position:absolute;
+    top:0;
+    right:0;
+    opacity: 0;
+    z-index:-1;
+    -webkit-transition:all 0s linear;
+  }
+  .addAndSub .iconYes {
+    -webkit-transform: rotate(0deg);
+    transform:rotate(0deg);
+    right:50px;
+    opacity: 1;
+    z-index:0;
+    -webkit-transition:all .5s linear;
+  }
+  .addAndSub .iconGray {
+    color:#a8a8a8;
+  }
+
+
+
+  /* 弹出框 */
+  .modelplane {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.7);
+    z-index:10;
+  }
+  .modelBox {
+    height:320px;
+    position:absolute;
+    left:15px;
+    right:15px;
+    margin-top:-160px;
+    top:50%;
+    background-color:#f6f6f6;
+    border-radius: 5px;
+  }
+  .modelHeader {
+    width:100%;
+    height:40px;
+    text-align: center;
+    color:#3e3e3e;
+    line-height:40px;
+    position:relative;
+    letter-spacing: 5px;
+  }
+  .modelHeader icon {
+    position:absolute;
+    right:15px;
+    top:0px;
+    color:#6b6b6b;
+    font-size:20px;
+    z-index:10;
+  }
+  .form {
+    display:flex;
+    margin:20px 0;
+    padding:0 15px;
+  }
+  .formName {
+    flex:3;
+    text-align: right;
+    color:#505050;
+    font-size:16px;
+  }
+  .formInput {
+    flex:7;
+    color:#646464;
+    margin-left:10px;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    border-radius: 100px;
+    border:1px solid #adadad;
+    box-sizing: border-box;
+    padding:0 10px;
+    background-color: white;
+    margin-top:-2px;
+    font-size:14px;
+    position:relative;
+  }
+  .noneBorder {
+    border:none;
+    margin-top:-4px;
+    background-color: transparent;
+  }
+  .noneBorder view{
+    display:inline-block;
+    margin-right:20px;
+  }
+  .noneBorder icon {
+    font-size:22px;
+    vertical-align: middle;
+  }
+  .noneBorder .icon-yuanxingxuanzhong-fill {
+    color:#f1941c;
+  }
+  .noneBorder text{
+    font-size:15px;
+    margin-left:10px;
+    vertical-align: middle;
+  }
+  .formInput input {
+   margin-top:1px;
+  }
+  .formInput .select icon {
+    display:block;
+    top:-2px;
+    right:10px;
+    color:#646464;
+    position:absolute;
+    z-index:10;
+    transform: rotate(0deg);
+    transition:all .3s linear;
+  }
+  .formInput .select .jisntouT {
+    transform: rotate(180deg);
+  }
+  .formInput .select .selectList {
+    position:absolute;
+    left:0;
+    top:35px;
+    border-radius: 4px;
+    border:1px solid #dedede;
+    z-index:10;
+    width:100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding:0 10px;
+  }
+  .formInput .select .selectList view {
+    border-bottom:1px solid #dedede;
+    padding:5px 0 ;
+  }
+  .formInput .select .selectList view:last-child {
+    border-bottom:none;
+  }
+  .modelBox button {
+    width:60%;
+    margin:0 auto;
+    border-radius: 100px;
+    height:30px;
+    line-height:30px;
+    background-color: #f1941c;
+    font-size:14px;
+    color:white;
+    margin-top:10px;
+  }
+
+  /* iphone6 */
+  @media only screen and (min-width: 374px) {
+   .addAndSub {
+    margin-top:-15px;
+  }
+  .addAndSub icon {
+    font-size:28px;
+  }
+  .addAndSub .iconYes {
+    right:50px;
+  }
+   .addAndSub text {
+    margin-top:6px;
+  } 
+}
+/* iphone 6p */
+  @media only screen and (min-width: 413px) {
+   .addAndSub {
+    margin-top:-20px;
+  }
+  .addAndSub icon {
+    font-size:38px;
+    float: left;
+  }
+  .addAndSub .iconYes {
+    right:58px;
+  }
+  .addAndSub text {
+    margin-top:10px;
+  }
+}

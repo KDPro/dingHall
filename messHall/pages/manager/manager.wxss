@@ -1,0 +1,88 @@
+/* pages/manager/manager.wxss */
+.buttonList {
+  height:200px;
+  width:100%;
+  position:absolute;
+  margin-top:-100px;
+  top:50%;
+}
+.buttonList button {
+  width:80%;
+  height:40px;
+  line-height:40px;
+  background-color: #00a9c2;
+  color:white;
+  margin-bottom:20px;
+  font-size:16px;
+}
+
+/* 弹出框 */
+  .modelplane {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.5);
+    z-index:10;
+  }
+  .modelBox {
+    height:200px;
+    position:absolute;
+    left:15px;
+    right:15px;
+    margin-top:-100px;
+    top:50%;
+    background-color:#f6f6f6;
+    border-radius: 5px;
+  }
+  .modelHeader {
+    width:100%;
+    height:40px;
+    text-align: center;
+    color:#3e3e3e;
+    line-height:40px;
+    position:relative;
+    letter-spacing: 5px;
+  }
+  .form {
+    display:flex;
+    margin:20px 0;
+    padding:0 15px;
+  }
+  .formName {
+    flex:3;
+    text-align: right;
+    color:#505050;
+    font-size:16px;
+  }
+  .formInput {
+    flex:7;
+    color:#646464;
+    margin-left:10px;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    border-radius: 100px;
+    border:1px solid #adadad;
+    box-sizing: border-box;
+    padding:0 10px;
+    background-color: white;
+    margin-top:-2px;
+    font-size:14px;
+    position:relative;
+  }
+  .formInput input {
+   margin-top:1px;
+  }
+  .modelBox button {
+    width:80%;
+    margin:0 auto;
+    border-radius: 100px;
+    height:35px;
+    line-height:35px;
+    background-color: #f1941c;
+    font-size:14px;
+    color:white;
+    margin-top:40px;
+  }

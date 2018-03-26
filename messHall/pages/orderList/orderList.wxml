@@ -1,0 +1,22 @@
+<!--pages/payMent/payMent.wxml-->
+<view class="h3">预定列表</view>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">姓名</view>
+    <view class="th">联系方式</view>
+    <view class="th ">时段</view>
+    <view class="th ">总计/元</view>
+    <view class="th ">详情</view>
+  </view>
+  <scroll-view scroll-y class="tbody">
+    <block wx:for="{{payMentList}}" wx:key="{{code}}">
+      <view class="tr">
+        <view class="td">{{item.name}}</view>
+        <view class="td">{{item.telephone}}</view>
+        <view class="td">{{item.needTime}}</view>
+        <view class="td">{{item.num}}</view>
+        <view class="td"><view class="op" bindtap='detail' data-id="{{item.id}}">详情</view></view>
+      </view>
+    </block>
+  </scroll-view> 
+</view>

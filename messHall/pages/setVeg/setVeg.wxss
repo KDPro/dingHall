@@ -1,0 +1,159 @@
+page {
+  height:100%;
+}
+.h3 {
+  color:#696969;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding:15px 0; 
+  text-align: center;
+  position:relative;
+}
+.addVeg {
+  position:absolute;
+  right:15px;
+  top:10px;
+  font-size:15px;
+  color:#f1941c;
+}
+.addVeg icon {
+  font-size:16px;     
+}
+.table {
+  width:90%;
+  height:calc(100% - 80px);
+  margin:0 auto;
+  font-size:12px;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  /* height: 40px; */
+  align-items: center;
+  background: white;
+  border:1px solid #bbb;
+  border-top:none;
+  box-sizing: border-box;
+}
+.tr:nth-of-type(even) {
+  background-color: #f7f7f7;
+}
+.th {
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border-left:1px solid #bbb;
+}
+.td {
+  justify-content: center;
+  color: #333;
+  display: flex;
+  align-items:stretch;
+  height:100%; 
+  border-left:1px solid #ddd;
+}
+.td .img {
+  width:70%;
+  padding-bottom:70%;
+  margin:10px 0;
+  position:relative;
+}
+.td .img image {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.table .bg-w{
+  background: #8e8e8e;
+  border-radius: 5px 5px 0 0;
+}
+
+.th:nth-of-type(1),.td:nth-of-type(1) {
+  flex:2;
+}
+.th:nth-of-type(2),.td:nth-of-type(2) {
+  flex:3;
+}
+.th:nth-of-type(3),.td:nth-of-type(3) {
+  flex:2;
+}
+.th:nth-of-type(4),.td:nth-of-type(4) {
+  flex:3;
+}
+.th:first-child {
+  border:none;
+}
+.td:first-child {
+  border-left: none;
+}
+.op {
+  width:70%;
+  height:20px;
+  background: #00a9c2;
+  color:white;
+  border-radius: 20px;
+  text-align: center;
+  line-height:20px;
+}
+.tbody {
+   height:calc(100% - 50px); 
+   overflow: hidden; 
+}
+
+/* 弹出框 */
+  .modelplane {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.5);
+    z-index:10;
+  }
+  .modelBox {
+    height:200px;
+    position:absolute;
+    left:15px;
+    right:15px;
+    margin-top:-100px;
+    top:50%;
+    background-color:#f6f6f6;
+    border-radius: 5px;
+  }
+  .modelHeader {
+    width:100%;
+    height:40px;
+    text-align: center;
+    color:#3e3e3e;
+    line-height:40px;
+    position:relative;
+    letter-spacing: 5px;
+  }
+  .formName {
+    text-align: center;
+    color:#505050;
+    font-size:16px;
+    margin-top:30px;
+  }
+  .remove {
+    position:absolute;
+    top:5px;
+    right:10px;
+    color:#333;
+  }
+  .modelBox button {
+    width:80%;
+    margin:0 auto;
+    border-radius: 100px;
+    height:35px;
+    line-height:35px;
+    background-color: #f1941c;
+    font-size:14px;
+    color:white;
+    margin-top:40px;
+  }
